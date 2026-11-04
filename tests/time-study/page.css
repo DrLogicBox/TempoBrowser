@@ -1,0 +1,28 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  background: #eef3f7;
+  color: #24374b;
+}
+body { margin: 0; }
+main { max-width: 1060px; margin: 0 auto; padding: 30px; }
+h1 { font-size: 30px; margin: 12px 0; }
+h2 { font-size: 17px; margin-top: 28px; }
+p { line-height: 1.8; color: #64748b; }
+.eyebrow { color: #087e83; letter-spacing: 2px; font-size: 11px; font-weight: 700; }
+.rule-label { margin-right: 12px; }
+select, button { font: inherit; padding: 9px 14px; border: 1px solid #d4dce5; border-radius: 8px; }
+button { background: #087e83; color: white; cursor: pointer; }
+button:disabled { opacity: .4; cursor: default; }
+.controls { display: flex; gap: 12px; align-items: center; margin: 20px 0; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.cards section { padding: 20px; background: white; border: 1px solid #dce5ec; border-radius: 13px; }
+.cards span { font-size: 12px; color: #64748b; }
+.cards strong { display: block; font-size: 26px; color: #087e83; margin-top: 10px; }
+.track { background: #dbe7eb; border-radius: 12px; margin-top: 24px; overflow: hidden; }
+#animation { width: 45px; height: 25px; background: #087e83; animation: travel 1000s linear infinite; }
+@keyframes travel { to { transform: translateX(800px); } }
+.hint { font-size: 12px; }
+pre { font: 11px/1.5 Consolas, monospace; padding: 15px; background: white; border-radius: 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
+#error { color: #a33127; }
+@media(max-width: 750px) { .cards { grid-template-columns: repeat(2, 1fr); } }

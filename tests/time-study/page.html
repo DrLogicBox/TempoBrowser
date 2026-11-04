@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tempo 本地计时上报实验</title>
+  <link rel="stylesheet" href="/page.css">
+</head>
+<body>
+  <main>
+    <p class="eyebrow">TEMPO / LOCAL TIME STUDY</p>
+    <h1>页面计时与后台记录</h1>
+    <p>累计时长直接取 performance.now() 的差值。每经过一个页面计时秒，上报一次累计值。</p>
+    <label class="rule-label" for="rule">后台采用规则</label>
+    <select id="rule">
+      <option value="client">采用前端上报的累计时长</option>
+      <option value="server">采用后台自身单调时钟</option>
+    </select>
+    <div class="controls">
+      <button id="start">开始一轮</button>
+      <button id="stop" disabled>结束并上报</button>
+      <span id="phase">准备就绪</span>
+    </div>
+    <div class="cards">
+      <section><span>页面累计时长</span><strong id="elapsed">0.000 s</strong></section>
+      <section><span>Date 时钟差值</span><strong id="date-elapsed">0.000 s</strong></section>
+      <section><span>后台最终采用值</span><strong id="adopted">等待上报</strong></section>
+      <section><span>后台独立计时</span><strong id="server-elapsed">等待上报</strong></section>
+    </div>
+    <div class="track"><div id="animation"></div></div>
+    <p class="hint">动画采用普通 CSS animation。网页右下角的调速工具决定页面时间的推进速度。</p>
+    <h2>最近一次后台响应</h2>
+    <pre id="last-response">等待开始</pre>
+    <p id="error" role="alert"></p>
+  </main>
+  <script src="/page.js"></script>
+</body>
+</html>
