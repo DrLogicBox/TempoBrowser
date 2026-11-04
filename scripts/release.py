@@ -30,7 +30,7 @@ with zipfile.ZipFile(binary, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as arch
     archive.write(root / 'docs/verification.md', Path(runtime.name) / '验证报告.md')
 
 source_items = ['src', 'tests', 'scripts', 'docs', 'assets', 'package.json', 'package-lock.json',
-                'README.md', 'LICENSE', '.gitignore', '.gitattributes']
+                'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', '.gitignore', '.gitattributes']
 with zipfile.ZipFile(source, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
     for item in source_items:
         target = root / item

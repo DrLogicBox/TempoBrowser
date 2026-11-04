@@ -104,4 +104,4 @@ node tests/combined-report.cjs
 
 ## 许可
 
-应用源码与项目标识采用 [MIT License](LICENSE)。Electron、Chromium 及其捆绑组件保留各自许可证，随便携程序提供。
+应用源码与项目标识采用 [MIT License](LICENSE)。Electron、Chromium 及其捆绑组件保留各自许可证，随便携程序提供，详见[第三方组件说明](THIRD_PARTY_NOTICES.md)。

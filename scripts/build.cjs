@@ -42,6 +42,9 @@ if (fs.existsSync(path.join(root, 'README.md'))) {
 for (const directory of ['assets', 'docs']) {
   if (fs.existsSync(path.join(root, directory))) fs.cpSync(path.join(root, directory), path.join(runtime, directory), { recursive: true });
 }
+for (const filename of ['LICENSE', 'THIRD_PARTY_NOTICES.md']) {
+  if (fs.existsSync(path.join(root, filename))) fs.copyFileSync(path.join(root, filename), path.join(runtime, filename));
+}
 const metadata = {
   appVersion: require('../package.json').version,
   release: 'beta-1',
